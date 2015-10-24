@@ -82,7 +82,7 @@ gulp.task('image:build', function () {
     gulp.src(path.src.img) //Выберем наши картинки
         .pipe(imagemin({ //Сожмем их
             progressive: true,
-            // svgoPlugins: [{removeViewBox: false}],
+            svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()],
             interlaced: true
         }))
